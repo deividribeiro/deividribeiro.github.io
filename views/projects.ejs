@@ -1,0 +1,27 @@
+<!-- views/projects.ejs -->
+<div class="projects-container">
+  <div class="projects-header">
+    <h1>Data Projects</h1>
+    <p>Here are some fun data projects I have worked on.</p>
+  </div>
+
+  <% projects.forEach((project, index) => { %>
+    <div class="project-block">
+    <div class="project-content" style="flex-direction: <%= index % 2 === 0 ? 'row' : 'row-reverse' %>;">
+      <div class="project-image">
+        <a href="<%= project.githubLink %>" target="_blank" rel="noopener noreferrer">
+          <img src="<%= project.image %>" alt="<%= project.title %> visualization">
+        </a>
+      </div>
+      <div class="project-text">
+        <h2 class="project-number"><%= String(index + 1).padStart(2, '0') %></h2>
+        <h2 class="project-title"><%= project.title %></h2>
+        <p class="project-description"><%= project.description %></p>
+      </div>
+    </div>
+  </div>
+    <% if(index < projects.length - 1) { %>
+      <div class="project-divider"></div>
+    <% } %>
+  <% }); %>
+</div>
