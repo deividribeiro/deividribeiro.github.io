@@ -1,0 +1,30 @@
+---
+layout: default
+title: Projects
+---
+<div class="projects-container">
+  <div class="projects-header">
+    <h1>Data Projects</h1>
+    <p>Here are some fun data projects I have worked on.</p>
+  </div>
+
+  {% for project in site.data.projects %}
+    <div class="project-block">
+    <div class="project-content" style="flex-direction: {% if forloop.index0 | modulo: 2 == 0 %}row{% else %}row-reverse{% endif %};">
+      <div class="project-image">
+        <a href="{{ project.githubLink }}" target="_blank" rel="noopener noreferrer">
+          <img src="{{ project.image }}" alt="{{ project.title }} visualization">
+        </a>
+      </div>
+      <div class="project-text">
+        <h2 class="project-number">{{ forloop.index | prepend: '00' | slice: -2, 2 }}</h2>
+        <h2 class="project-title">{{ project.title }}</h2>
+        <p class="project-description">{{ project.description }}</p>
+      </div>
+    </div>
+  </div>
+    {% unless forloop.last %}
+      <div class="project-divider"></div>
+    {% endunless %}
+  {% endfor %}
+</div>
