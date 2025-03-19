@@ -10,7 +10,8 @@ title: Projects
 
   {% for project in site.data.projects %}
     <div class="project-block">
-    <div class="project-content" style="flex-direction: {% if forloop.index0 | modulo: 2 == 0 %}row{% else %}row-reverse{% endif %};">
+    {% assign is_even = forloop.index0 | modulo: 2 %}
+    <div class="project-content" style="flex-direction: {% if is_even == 0 %}row{% else %}row-reverse{% endif %};">
       <div class="project-image">
         <a href="{{ project.githubLink }}" target="_blank" rel="noopener noreferrer">
           <img src="{{ project.image }}" alt="{{ project.title }} visualization">
