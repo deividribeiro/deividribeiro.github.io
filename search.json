@@ -2,13 +2,19 @@
 layout: null
 ---
 [
-  {% for page in site.pages %}
-    {% if page.title and page.url != "/search/" %}
-      {
-        "title"    : "{{ page.title | escape }}",
-        "url"      : "{{ site.baseurl }}{{ page.url }}",
-        "content"  : "{{ page.content | strip_html | strip_newlines | escape }}"
-      }{% unless forloop.last %},{% endunless %}
-    {% endif %}
+  {% assign searchable_content = site.posts | concat: site.pages %}
+  {% for item in searchable_content %}
+  {% unless item.url contains "/search/" or item.exclude_from_search == true %}
+  {
+    "title": {{ item.title | jsonify }},
+    "url": {{ site.baseurl | append: item.url | jsonify }},
+    "date": {{ item.date | date: "%Y-%m-%d" | jsonify }},
+    "category": {{ item.category | jsonify }},
+    "tags": {{ item.tags | join: ', ' | jsonify }},
+    "description": {{ item.description | strip_html | strip_newlines | truncate: 160 | jsonify }},
+    "content": {{ item.content | strip_html | strip_newlines | jsonify }}
+  }
+  {% unless forloop.last %},{% endunless %}
+  {% endunless %}
   {% endfor %}
 ]
