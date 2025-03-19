@@ -1,12 +1,26 @@
 <!DOCTYPE html>
-  <header>
-    <div class="container">
-      <h1 class="site-title"><a href="{{ site.baseurl }}/">{{ site.data.bio.name }}</a></h1>
-      <div class="search-container">
-        <form action="{{ site.baseurl }}/search.html" method="get">
-          <input type="text" placeholder="Search..." name="query" id="search-box">
-          <button type="submit"><img src="{{ site.baseurl }}/assets/images/search-icon.svg" alt="Search"></button>
-        </form>
-      </div>
+<header>
+  <div class="container">
+    <h1 class="site-title"><a href="{{ site.baseurl }}/">{{ site.data.bio.name }}</a></h1>
+    <div class="search-container">
+      <input type="text" placeholder="Search..." id="search-input">
+      <button onclick="performSearch()"><img src="{{ site.baseurl }}/assets/images/search-icon.svg" alt="Search"></button>
     </div>
-  </header>
+    <div id="results-container"></div>
+  </div>
+</header>
+
+<!--<script>-->
+<!--  function performSearch() {-->
+<!--    var query = document.getElementById('search-input').value;-->
+<!--    if (query) {-->
+<!--      window.location.href = '{{ site.baseurl }}/search?query=' + encodeURIComponent(query);-->
+<!--    }-->
+<!--  }-->
+
+<!--  document.getElementById('search-input').addEventListener('keypress', function(event) {-->
+<!--    if (event.key === 'Enter') {-->
+<!--      performSearch();-->
+<!--    }-->
+<!--  });-->
+<!--</script>-->
