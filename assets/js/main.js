@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   if (siteNav) {
     window.addEventListener('scroll', function() {
-      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      const scrollTop = window.scrollY || document.documentElement.scrollTop;
 
       if (window.innerWidth <= parseInt(getComputedStyle(document.documentElement).getPropertyValue('--breakpoint-md'))) {
         if (scrollTop > lastScrollTop && scrollTop > 100) {

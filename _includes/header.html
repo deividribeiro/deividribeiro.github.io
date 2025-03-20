@@ -4,7 +4,7 @@
     <h1 class="site-title"><a href="{{ site.baseurl }}/">{{ site.data.bio.name }}</a></h1>
     <div class="search-container">
       <input type="text" placeholder="Search..." id="search-input">
-      <button onclick="performSearch()"><img src="{{ site.baseurl }}/assets/images/search-icon.svg" alt="Search"></button>
+      <button onclick="performSearch()" data-baseurl="{{ site.baseurl }}"><img src="{{ site.baseurl }}/assets/images/search-icon.svg" alt="Search"></button>
     </div>
     <div id="results-container"></div>
   </div>
