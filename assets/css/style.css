@@ -345,9 +345,9 @@ nav {
   margin-bottom: 0;
 }
 
-.research-header p2 {
+.research-header p {
   font-family: var(--font-family-base);
-  font-size: var(--font-size-p2);
+  font-size: var(--font-size-p3);
   display: block;
 }
 
@@ -685,11 +685,11 @@ footer {
   /* Research responsive */
   .research-topic {
     grid-template-columns: 1fr;
-    gap: var(--spacing-md);
+    gap: var(--spacing-xs);
   }
 
   .topic-title {
-    margin-bottom: var(--spacing-sm);
+    margin-bottom: var(--spacing-xs);
   }
 
   .research-header h2 {
