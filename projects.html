@@ -4,7 +4,7 @@ title: Projects
 ---
 <div class="projects-container">
     <h5>Data Projects</h5>
-    <p2>Here are some fun data projects I have worked on.</p2>
+    <p>Here are some fun data projects I have worked on.</p>
 
     {% for project in site.data.projects %}
     <div class="project-block">
@@ -22,7 +22,7 @@ title: Projects
             <div class="project-text">
                 <h5 class="project-number">{{ forloop.index | prepend: '00' | slice: -2, 2 }}</h5>
                 <h5 class="project-title">{{ project.title }}</h5>
-                <p2 class="project-description">{{ project.description }}</p2>
+                <p class="project-description">{{ project.description }}</p>
             </div>
         </div>
     </div>
