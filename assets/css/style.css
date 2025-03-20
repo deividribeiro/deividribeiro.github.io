@@ -356,11 +356,11 @@ nav {
 }
 
 /* Explicitly set the direction based on class */
-.left-aligned .project-content {
+.left-aligned {
   flex-direction: row;
 }
 
-.right-aligned .project-content {
+.right-aligned {
   flex-direction: row-reverse;
 }
 
@@ -581,8 +581,16 @@ footer {
     gap: 1.5rem;
   }
 
+  .left-aligned, .right-aligned {
+    flex-direction: column;
+  }
+
   .project-image {
     max-width: 100%;
+  }
+
+  .project-text {
+    width: 100%; /* Make text take full width */
   }
 
   /* CV page responsive */

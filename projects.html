@@ -3,27 +3,27 @@ layout: default
 title: Projects
 ---
 <div class="projects-container">
-  <h5>Data Projects</h5>
-  <p2>Here are some fun data projects I have worked on.</p2>
+    <h5>Data Projects</h5>
+    <p2>Here are some fun data projects I have worked on.</p2>
 
-  {% for project in site.data.projects %}
+    {% for project in site.data.projects %}
     <div class="project-block">
-    {% assign is_even = forloop.index0 | modulo: 2 %}
-    <div class="project-content" style="flex-direction: {% if is_even == 0 %}row{% else %}row-reverse{% endif %};">
-      <div class="project-image">
-        <a href="{{ project.githubLink }}" target="_blank" rel="noopener noreferrer">
-          <img src="{{ project.image }}" alt="{{ project.title }} visualization">
-        </a>
-      </div>
-      <div class="project-text">
-        <h5 class="project-number">{{ forloop.index | prepend: '00' | slice: -2, 2 }}</h5>
-        <h5 class="project-title">{{ project.title }}</h5>
-        <p2 class="project-description">{{ project.description }}</p2>
-      </div>
+        {% assign is_even = forloop.index0 | modulo: 2 %}
+        <div class="project-content {% if is_even == 0 %}left-aligned{% else %}right-aligned{% endif %}">
+            <div class="project-image">
+                <a href="{{ project.githubLink }}" target="_blank" rel="noopener noreferrer">
+                    <img src="{{ project.image }}" alt="{{ project.title }} visualization">
+                </a>
+            </div>
+            <div class="project-text">
+                <h5 class="project-number">{{ forloop.index | prepend: '00' | slice: -2, 2 }}</h5>
+                <h5 class="project-title">{{ project.title }}</h5>
+                <p2 class="project-description">{{ project.description }}</p2>
+            </div>
+        </div>
     </div>
-  </div>
     {% unless forloop.last %}
-      <div class="project-divider"></div>
+    <div class="project-divider"></div>
     {% endunless %}
-  {% endfor %}
+    {% endfor %}
 </div>
