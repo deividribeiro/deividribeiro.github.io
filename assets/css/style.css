@@ -21,8 +21,8 @@
   --color-icon-text: #495057;
 
   /* Typography */
-  --font-family-headings: "Helvetica", Arial, sans-serif;
-  --font-family-base: "Avenir Light", Arial, sans-serif;
+  --font-family-headings: "Helvetica", Arial;
+  --font-family-base: "Avenir Light", Arial;
   --font-size-base: 1rem;
   --font-size-sm: 0.875rem;
   --font-size-xs: 0.8rem;
@@ -88,7 +88,7 @@
 
 /* Heading Styles */
 h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-family-headings);
+  font-family: var(--font-family-headings), sans-serif;
   margin-bottom: var(--spacing-md);
   font-weight: normal;
 }
@@ -102,7 +102,7 @@ h6 { font-size: var(--font-size-h6); }
 
 /* Paragraph Styles */
 p {
-  font-family: var(--font-family-base);
+  font-family: var(--font-family-base), sans-serif;
   font-size: var(--font-size-p3); /* Default paragraph size p3 */
   margin-bottom: var(--spacing-md);
 }
@@ -113,7 +113,7 @@ p {
 
 /* Update body font */
 body {
-  font-family: var(--font-family-base);
+  font-family: var(--font-family-base), sans-serif;
   font-size: var(--font-size-p3); /* Body text uses p3 size */
   line-height: var(--line-height-base);
   color: var(--color-text);
@@ -135,7 +135,7 @@ header {
 
 .site-title {
   display: inline-block;
-  font-family: var(--font-family-headings);
+  font-family: var(--font-family-headings), sans-serif;
   font-size: var(--font-size-h3); /* Using h4 size for site title */
   font-weight: 500;
   letter-spacing: 1px;
@@ -190,7 +190,7 @@ nav {
 }
 
 .nav-menu li a {
-  font-family: var(--font-family-base); /* Avenir Light */
+  font-family: var(--font-family-base), sans-serif; /* Avenir Light */
   text-decoration: none;
   color: var(--color-text);
   font-size: var(--font-size-p3); /* p3 size for navigation */
@@ -284,14 +284,14 @@ nav {
 }
 
 .jobs h2 {
-  font-family: var(--font-family-headings); /* Helvetica */
+  font-family: var(--font-family-headings), sans-serif; /* Helvetica */
   font-size: var(--font-size-h4); /* h4 for work jobs header */
   text-align: center;
   margin-bottom: var(--spacing-md);
 }
 
 .subtitle {
-  font-family: var(--font-family-base); /* Avenir Light */
+  font-family: var(--font-family-base), sans-serif; /* Avenir Light */
   text-align: center;
   font-size: var(--font-size-p1); /* p2 for subtitle */
   margin-bottom: var(--spacing-sm);
@@ -305,12 +305,12 @@ nav {
 }
 
 .job-left h3 {
-  font-family: var(--font-family-headings); /* Helvetica */
+  font-family: var(--font-family-headings), sans-serif; /* Helvetica */
   font-size: var(--font-size-h6); /* h3 for job left */
 }
 
 .job-middle p {
-  font-family: var(--font-family-base); /* Avenir Light */
+  font-family: var(--font-family-base), sans-serif; /* Avenir Light */
   font-size: var(--font-size-p2); /* p2 for job middle */
 }
 
@@ -333,20 +333,20 @@ nav {
 
 /* ===== RESEARCH PAGE STYLES ===== */
 .research-header {
-  font-family: var(--font-family-headings);
+  font-family: var(--font-family-headings), sans-serif;
   font-size: var(--font-size-h4);
   text-align: center;
   margin-bottom: var(--spacing-xxxl);
 }
 
 .research-header h4 {
-  font-family: var(--font-family-headings);
+  font-family: var(--font-family-headings), sans-serif;
   font-size: var(--font-size-h4);
   margin-bottom: 0;
 }
 
 .research-header p {
-  font-family: var(--font-family-base);
+  font-family: var(--font-family-base), sans-serif;
   font-size: var(--font-size-p3);
   display: block;
 }
@@ -364,7 +364,7 @@ nav {
 }
 
 .topic-title h6 {
-  font-family: var(--font-family-headings);
+  font-family: var(--font-family-headings), sans-serif;
   font-size: var(--font-size-h6);
 }
 
