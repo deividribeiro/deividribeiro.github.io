@@ -1,0 +1,15 @@
+topics:
+  - title: Machine Learning for VERITAS Data Analysis
+    details:
+      - Developed machine learning algorithms to analyze gamma-ray data collected by the VERITAS observatory.
+      - Improved classification accuracy for astrophysical sources by implementing advanced feature extraction techniques.
+      - Conducted statistical analysis to validate the performance of the models, ensuring robustness and reproducibility.
+      - Delivered key insights into the behavior of gamma-ray sources, contributing to collaboration publications.
+  
+  - title: Development and Commissioning of Advanced Gamma-Ray Telescope Systems
+    details:
+      - Led the design, development, and commissioning of the prototype Schwarzschild-Couder Telescope (pSCT) for the Cherenkov Telescope Array.
+      - Aligned and validated the optical system, achieving on-axis optical design goals.
+      - Managed hardware and software integration, including mirror calibration and alignment tools.
+      - Published and presented extensively on the technical and scientific performance of the pSCT, including the detection of the Crab Nebula.
+      - Earned the Simon Swordy Outstanding VERITAS Contribution Award in recognition of exceptional contributions.

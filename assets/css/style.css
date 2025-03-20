@@ -21,7 +21,8 @@
   --color-icon-text: #495057;
 
   /* Typography */
-  --font-family-base: Arial, sans-serif;
+  --font-family-headings: "Helvetica", Arial, sans-serif;
+  --font-family-base: "Avenir Light", Arial, sans-serif;
   --font-size-base: 1rem;
   --font-size-sm: 0.875rem;
   --font-size-xs: 0.8rem;
@@ -35,6 +36,19 @@
   --font-size-display-xl: 2.5rem;
   --line-height-base: 1.6;
   --line-height-relaxed: 1.8;
+
+  /* Heading Font Sizes */
+  --font-size-h1: 88px;
+  --font-size-h2: 72px;
+  --font-size-h3: 50px;
+  --font-size-h4: 40px;
+  --font-size-h5: 28px;
+  --font-size-h6: 22px;
+
+  /* Paragraph Font Sizes */
+  --font-size-p1: 20px;
+  --font-size-p2: 18px;
+  --font-size-p3: 15px;
 
   /* Spacing */
   --spacing-xs: 5px;
@@ -51,7 +65,7 @@
   --container-max-width: 1200px;
   --container-padding: 0 15px;
   --border-radius-sm: 3px;
-  --border-radius: 4px;
+  --border-radius: 12px;
   --border-radius-lg: 8px;
   --border-radius-circle: 50%;
   --box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -72,8 +86,35 @@
   box-sizing: border-box;
 }
 
+/* Heading Styles */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-family-headings);
+  margin-bottom: var(--spacing-md);
+  font-weight: normal;
+}
+
+h1 { font-size: var(--font-size-h1); }
+h2 { font-size: var(--font-size-h2); }
+h3 { font-size: var(--font-size-h3); }
+h4 { font-size: var(--font-size-h4); }
+h5 { font-size: var(--font-size-h5); }
+h6 { font-size: var(--font-size-h6); }
+
+/* Paragraph Styles */
+p {
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-p3); /* Default paragraph size p3 */
+  margin-bottom: var(--spacing-md);
+}
+
+.p1, p.large { font-size: var(--font-size-p1); }
+.p2, p.medium { font-size: var(--font-size-p2); }
+.p3, p { font-size: var(--font-size-p3); } /* Default paragraph size */
+
+/* Update body font */
 body {
   font-family: var(--font-family-base);
+  font-size: var(--font-size-p3); /* Body text uses p3 size */
   line-height: var(--line-height-base);
   color: var(--color-text);
   background-color: var(--color-background);
@@ -94,7 +135,8 @@ header {
 
 .site-title {
   display: inline-block;
-  font-size: var(--font-size-display-xl);
+  font-family: var(--font-family-headings);
+  font-size: var(--font-size-h3); /* Using h4 size for site title */
   font-weight: 500;
   letter-spacing: 1px;
 }
@@ -137,9 +179,10 @@ nav {
 }
 
 .nav-menu li a {
+  font-family: var(--font-family-base); /* Avenir Light */
   text-decoration: none;
   color: var(--color-text);
-  font-size: var(--font-size-lg);
+  font-size: var(--font-size-p3); /* p3 size for navigation */
   transition: color var(--transition-standard);
 }
 
@@ -195,60 +238,76 @@ nav {
 }
 
 /* ===== WORK EXPERIENCE SECTION STYLES ===== */
-.work-experience {
+.jobs {
   margin-top: var(--spacing-section);
 }
 
-.work-experience h2 {
-  font-size: var(--font-size-display-lg);
+.jobs h2 {
+  font-family: var(--font-family-headings); /* Helvetica */
+  font-size: var(--font-size-h4); /* h4 for work jobs header */
   text-align: center;
-  margin-bottom: var(--spacing-xs);
+  margin-bottom: var(--spacing-md);
 }
 
 .subtitle {
+  font-family: var(--font-family-base); /* Avenir Light */
   text-align: center;
-  font-size: var(--font-size-lg);
-  color: var(--color-text-light);
-  margin-bottom: var(--spacing-xxl);
+  font-size: var(--font-size-p1); /* p2 for subtitle */
+  margin-bottom: var(--spacing-sm);
 }
 
-.experience-item {
+.job-item {
   display: grid;
   grid-template-columns: 1fr 1fr 3fr;
   gap: var(--spacing-lg);
   margin-bottom: var(--spacing-xxxl);
 }
 
-.experience-left h3 {
-  font-size: var(--font-size-xl);
-  font-weight: 600;
-  margin-top: 0;
+.job-left h3 {
+  font-family: var(--font-family-headings); /* Helvetica */
+  font-size: var(--font-size-h6); /* h3 for job left */
 }
 
-.experience-middle p {
-  color: var(--color-secondary);
-  font-size: var(--font-size-md);
+.job-middle p {
+  font-family: var(--font-family-base); /* Avenir Light */
+  font-size: var(--font-size-p2); /* p2 for job middle */
 }
 
-.experience-right ul {
+.job-right ul {
   list-style-type: disc;
   padding-left: var(--spacing-lg);
 }
 
-.experience-right li {
+.job-right li {
   margin-bottom: var(--spacing-md);
   line-height: var(--line-height-base);
 }
 
+.job-divider {
+  width: 100%;
+  height: 0;
+  background-color: black;
+  margin: 30px 0;
+}
+
 /* ===== RESEARCH PAGE STYLES ===== */
 .research-header {
+  font-family: var(--font-family-headings);
+  font-size: var(--font-size-h4);
   text-align: center;
   margin-bottom: var(--spacing-xxxl);
 }
 
-.research-header h2 {
-  font-size: var(--font-size-display-xl);
-  margin-bottom: var(--spacing-xs);
+.research-header h4 {
+  font-family: var(--font-family-headings);
+  font-size: var(--font-size-h4);
+  margin-bottom: 0;
+}
+
+.research-header p2 {
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-p2);
+  display: block;
 }
 
 .research-topics {
@@ -258,16 +317,14 @@ nav {
 
 .research-topic {
   display: grid;
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: 1fr 2.5fr;
   gap: var(--spacing-xl);
   margin-bottom: var(--spacing-section);
 }
 
-.topic-title h3 {
-  font-size: var(--font-size-xxl);
-  font-weight: 600;
-  line-height: 1.4;
-  margin-top: 0;
+.topic-title h6 {
+  font-family: var(--font-family-headings);
+  font-size: var(--font-size-h6);
 }
 
 .topic-details ul {
@@ -283,6 +340,13 @@ nav {
 /* ===== PROJECT STYLES ===== */
 .project-block {
   margin: 3rem 0;
+}
+
+.project-divider {
+  width: 100%;
+  height: 1px;
+  background-color: var(--color-primary);
+  margin: 30px 0; /* Adjust spacing above and below the line as needed */
 }
 
 .project-content {
@@ -331,6 +395,7 @@ nav {
 .project-text {
   flex: 1;
   padding: var(--spacing-sm);
+  margin-bottom: 0;
 }
 
 /* ===== CV PAGE STYLES ===== */
@@ -355,7 +420,7 @@ nav {
 
 .cv-actions {
   margin-bottom: var(--spacing-sm);
-  text-align: right;
+  text-align: center;
 }
 
 .download-button {
@@ -486,13 +551,13 @@ footer {
     height: 180px;
   }
 
-  /* Experience responsive */
-  .experience-item {
+  /* Job responsive */
+  .job-item {
     grid-template-columns: 1fr;
     gap: var(--spacing-sm);
   }
 
-  .experience-left, .experience-middle, .experience-right {
+  .job-left, .job-middle, .job-right {
     margin-bottom: var(--spacing-md);
   }
 

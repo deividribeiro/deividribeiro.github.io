@@ -1,0 +1,14 @@
+experience:
+  - title: POST-DOCTORAL FELLOW
+    period: September 2022 - present
+    details:
+      - Continued leadership within the VERITAS collaboration by chairing the Analysis Coordination Group, leading development of primary analysis package in C++, and extensive student mentorship.
+      - Developed ML models for multi-modal image classification of gamma-ray images. Wrote custom LSTM, wGAN, conditional GAN and vision transformers neural networks.
+
+  - title: PHD STUDENT  
+    period: August 2016 - September 2022
+    details:
+      - PhD astrophysicist with 8 years experience in data science, machine learning, research, software and hardware development.
+      - As part of the VERITAS collaboration, I observed and analyzed high-energy gamma-rays, which I fit to astrophysical models of Superluminous Supernovae, GRBs, gravitational waves and blazar galaxies. I also supported the collaboration through extensive mentoring and service projects, including lead software development of the primary analysis package written in C++.
+      - Built, installed and commissioned the mirror panels toward the alignment of the prototype Schwarszchild Couder telescope to <3 arcmin angular resolution.
+      - Preceptor and Lead Teaching Fellow in the physics department where I was award the Alan Sachs Teaching award.
