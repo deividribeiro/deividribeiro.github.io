@@ -175,7 +175,18 @@ nav {
   list-style: none;
   display: flex;
   justify-content: center;
-  gap: var(--spacing-xxl);
+  gap: var(--spacing-xl);
+}
+
+.nav-menu a {
+  text-decoration: none;
+  color: var(--color-text);
+  font-size: var(--font-size-md);
+  transition: color var(--transition-fast);
+}
+
+.nav-menu li {
+  margin: 0 var(--spacing-lg);
 }
 
 .nav-menu li a {
@@ -183,11 +194,41 @@ nav {
   text-decoration: none;
   color: var(--color-text);
   font-size: var(--font-size-p3); /* p3 size for navigation */
-  transition: color var(--transition-standard);
+  transition: color var(--transition-fast);
 }
 
-.nav-menu li a:hover {
-  color: var(--color-secondary);
+.nav-menu a:hover,
+.nav-menu a.active {
+  color: var(--color-link-focus);
+}
+
+/* ===== Mobile Navigation ===== */
+.site-nav {
+  position: sticky;
+  top: 0;
+  background-color: var(--color-background);
+  z-index: 1000;
+  transition: transform var(--transition-standard);
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  position: absolute;
+  right: var(--spacing-md);
+  top: var(--spacing-sm);
+  z-index: 1010;
+  color: var(--color-primary);
+  padding: 5px;
+}
+
+.hamburger-icon {
+  font-size: 1.8rem;
+  line-height: 1;
+  display: block; /* Make sure the icon is displayed */
 }
 
 /* ===== HERO SECTION STYLES ===== */
@@ -540,9 +581,89 @@ footer {
   }
 
   /* Navigation responsive */
+  .menu-toggle {
+    display: block;
+  }
+
+  /* Basic hamburger icon using spans */
+  .hamburger-icon {
+    position: relative;
+    display: block;
+    width: 24px;
+    height: 18px;
+  }
+
+  .hamburger-icon:before,
+  .hamburger-icon:after,
+  .hamburger-icon span {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--color-primary);
+    transition: all var(--transition-standard);
+  }
+
+  .hamburger-icon:before {
+    top: 8px;
+  }
+
+  .hamburger-icon span {
+    top: 8px;
+  }
+
+  .hamburger-icon:after {
+    bottom: 0;
+  }
+
+  /* X animation when menu is active */
+  .nav-menu.active + .menu-toggle .hamburger-icon:before,
+  .menu-toggle.active .hamburger-icon:before {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .nav-menu.active + .menu-toggle .hamburger-icon span,
+  .menu-toggle.active .hamburger-icon span {
+    opacity: 0;
+  }
+
+  .nav-menu.active + .menu-toggle .hamburger-icon:after,
+  .menu-toggle.active .hamburger-icon:after {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
   .nav-menu {
     flex-direction: column;
-    gap: var(--spacing-md);
+    position: fixed;
+    right: -100%;
+    width: 80%;
+    max-width: 300px;
+    background-color: var(--color-background);
+    box-shadow: var(--box-shadow);
+    transition: right var(--transition-standard);
+    border-radius: var(--border-radius-sm);
+    padding: var(--spacing-md);
+    z-index: 1000;
+  }
+
+  .nav-menu.active {
+    /*display: flex;*/
+    right: 0;
+  }
+
+  .nav-menu li {
+    margin: var(--spacing-xs) 0;
+  }
+
+  /* Ensure main content doesn't overlap with menu */
+  main {
+    position: relative;
+    transition: transform var(--transition-standard);
+  }
+
+  body:has(.nav-menu.active) main {
+    transform: translateX(-250px); /* Push content when menu is open */
   }
 
   /* Hero responsive */

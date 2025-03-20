@@ -1,4 +1,4 @@
-// public/js/main.js
+// assets/js/main.js
 document.addEventListener('DOMContentLoaded', function() {
   // Navigation active state
   const currentLocation = window.location.pathname;
@@ -10,69 +10,47 @@ document.addEventListener('DOMContentLoaded', function() {
       item.classList.add('active');
     }
   });
+  // Mobile menu toggle
+  const menuToggle = document.querySelector('.menu-toggle');
+  const navMenu = document.querySelector('.nav-menu');
 
-  // Simple form validation for contact form (if exists)
-  const contactForm = document.getElementById('contact-form');
-  if (contactForm) {
-    contactForm.addEventListener('submit', function(e) {
-      const nameInput = document.getElementById('name');
-      const emailInput = document.getElementById('email');
-      const messageInput = document.getElementById('message');
-      
-      let isValid = true;
-      
-      if (!nameInput.value.trim()) {
-        markInvalid(nameInput, 'Name is required');
-        isValid = false;
-      } else {
-        markValid(nameInput);
-      }
-      
-      if (!emailInput.value.trim() || !isValidEmail(emailInput.value)) {
-        markInvalid(emailInput, 'Valid email is required');
-        isValid = false;
-      } else {
-        markValid(emailInput);
-      }
-      
-      if (!messageInput.value.trim()) {
-        markInvalid(messageInput, 'Message is required');
-        isValid = false;
-      } else {
-        markValid(messageInput);
-      }
-      
-      if (!isValid) {
-        e.preventDefault();
+  if (menuToggle && navMenu) {
+    menuToggle.addEventListener('click', function(event) {
+      event.stopPropagation();
+      navMenu.classList.toggle('active');
+      menuToggle.classList.toggle('active');
+    });
+
+    // Close menu when clicking outside
+    document.addEventListener('click', function(e) {
+      if (!navMenu.contains(e.target) && !menuToggle.contains(e.target) && navMenu.classList.contains('active')) {
+        navMenu.classList.remove('active');
+        menuToggle.classList.remove('active');
       }
     });
   }
-  
-  // Helper functions
-  function markInvalid(element, message) {
-    element.classList.add('invalid');
-    const errorElement = document.createElement('div');
-    errorElement.className = 'error-message';
-    errorElement.textContent = message;
-    
-    const existingError = element.parentNode.querySelector('.error-message');
-    if (existingError) {
-      element.parentNode.removeChild(existingError);
-    }
-    
-    element.parentNode.appendChild(errorElement);
-  }
-  
-  function markValid(element) {
-    element.classList.remove('invalid');
-    const existingError = element.parentNode.querySelector('.error-message');
-    if (existingError) {
-      element.parentNode.removeChild(existingError);
-    }
-  }
-  
-  function isValidEmail(email) {
-    const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return re.test(email);
+
+  // Add scroll behavior to hide/show the menu
+  let lastScrollTop = 0;
+  const siteNav = document.querySelector('.site-nav');
+
+  if (siteNav) {
+    window.addEventListener('scroll', function() {
+      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+      if (window.innerWidth <= parseInt(getComputedStyle(document.documentElement).getPropertyValue('--breakpoint-md'))) {
+        if (scrollTop > lastScrollTop && scrollTop > 100) {
+          // Scrolling down
+          siteNav.style.transform = 'translateY(-100%)';
+        } else {
+          // Scrolling up
+          siteNav.style.transform = 'translateY(0)';
+        }
+      } else {
+        siteNav.style.transform = 'translateY(0)';
+      }
+
+      lastScrollTop = scrollTop;
+    });
   }
 });
