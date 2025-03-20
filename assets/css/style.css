@@ -4,7 +4,7 @@
   --color-primary: #333;
   --color-primary-dark: #212529;
   --color-secondary: #666;
-  --color-text: #333;
+  --color-text: var(--color-primary); /* Now references --color-primary instead of duplicating #333 */
   --color-text-light: #555;
   --color-text-lighter: #6c757d;
   --color-text-muted: #777;
@@ -24,6 +24,7 @@
   --font-size-base: 1rem;
   --font-size-sm: 0.875rem;
   --font-size-xs: 0.8rem;
+  --font-size-md: 0.95rem;
   --font-size-lg: 1.1rem;
   --font-size-xl: 1.2rem;
   --font-size-xxl: 1.3rem;
@@ -57,6 +58,10 @@
 
   /* Breakpoints */
   --breakpoint-md: 768px;
+
+  /* Transitions */
+  --transition-standard: 0.3s ease;
+  --transition-fast: 0.2s ease;
 }
 
 * {
@@ -133,7 +138,7 @@ nav {
   text-decoration: none;
   color: var(--color-text);
   font-size: var(--font-size-lg);
-  transition: color 0.3s ease;
+  transition: color var(--transition-standard);
 }
 
 .nav-menu li a:hover {
@@ -301,7 +306,7 @@ footer {
 
 .experience-middle p {
   color: var(--color-secondary);
-  font-size: 0.95rem;
+  font-size: var(--font-size-md);
 }
 
 .experience-right ul {
@@ -418,7 +423,7 @@ footer {
 
 .project-image a {
   display: block;
-  transition: opacity 0.3s ease;
+  transition: opacity var(--transition-standard);
 }
 
 .project-image a:hover {
@@ -488,7 +493,7 @@ footer {
   text-decoration: none;
   border-radius: var(--border-radius);
   font-weight: bold;
-  transition: background-color 0.3s ease;
+  transition: background-color var(--transition-standard);
 }
 
 .download-button:hover {
@@ -511,7 +516,7 @@ footer {
   border-radius: var(--border-radius-circle);
   background-color: var(--color-icon-bg);
   color: var(--color-icon-text);
-  transition: all 0.2s ease;
+  transition: all var(--transition-fast);
 }
 
 .social-icons a:hover {
