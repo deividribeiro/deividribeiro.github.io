@@ -1,4 +1,5 @@
 /* public/css/style.css */
+/* ===== CSS VARIABLES ===== */
 :root {
   /* Colors */
   --color-primary: #333;
@@ -64,6 +65,7 @@
   --transition-fast: 0.2s ease;
 }
 
+/* ===== BASE STYLES ===== */
 * {
   margin: 0;
   padding: 0;
@@ -84,7 +86,7 @@ body {
   padding: var(--container-padding);
 }
 
-/* Header */
+/* ===== HEADER STYLES ===== */
 header {
   padding: var(--spacing-lg) 0;
   border-bottom: 1px solid var(--color-border);
@@ -121,7 +123,7 @@ header {
   cursor: pointer;
 }
 
-/* Navigation */
+/* ===== NAVIGATION STYLES ===== */
 nav {
   padding: var(--spacing-md) 0;
   text-align: center;
@@ -145,7 +147,7 @@ nav {
   color: var(--color-secondary);
 }
 
-/* Hero Section */
+/* ===== HERO SECTION STYLES ===== */
 .hero {
   padding: var(--spacing-xxxl) 0;
   text-align: center;
@@ -192,88 +194,7 @@ nav {
   color: var(--color-text-light);
 }
 
-/* Footer */
-footer {
-  padding: var(--spacing-lg) 0;
-  text-align: center;
-  border-top: 1px solid var(--color-border);
-  margin-top: var(--spacing-xxxl);
-  color: var(--color-text-muted);
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  .site-title {
-    font-size: var(--font-size-display);
-    display: block;
-    text-align: center;
-  }
-
-  .search-container {
-    float: none;
-    text-align: center;
-    margin-top: var(--spacing-lg);
-  }
-
-  .nav-menu {
-    flex-direction: column;
-    gap: var(--spacing-md);
-  }
-
-  .profile-image {
-    width: 180px;
-    height: 180px;
-  }
-}
-
-/* Contact Form Styles */
-.form-group {
-  margin-bottom: var(--spacing-lg);
-}
-
-.form-group label {
-  display: block;
-  margin-bottom: var(--spacing-xs);
-  font-weight: bold;
-}
-
-.form-group input,
-.form-group textarea {
-  width: 100%;
-  padding: var(--spacing-sm);
-  border: 1px solid var(--color-border-light);
-  border-radius: var(--border-radius);
-}
-
-.form-group textarea {
-  resize: vertical;
-}
-
-.btn {
-  background-color: var(--color-primary);
-  color: white;
-  padding: var(--spacing-sm) var(--spacing-lg);
-  border: none;
-  border-radius: var(--border-radius);
-  cursor: pointer;
-  font-size: var(--font-size-base);
-}
-
-.btn:hover {
-  background-color: var(--color-secondary);
-}
-
-.invalid {
-  border-color: var(--color-error) !important;
-}
-
-.error-message {
-  color: var(--color-error);
-  font-size: var(--font-size-xs);
-  margin-top: var(--spacing-xs);
-}
-
-/* Work Experience Section */
+/* ===== WORK EXPERIENCE SECTION STYLES ===== */
 .work-experience {
   margin-top: var(--spacing-section);
 }
@@ -319,19 +240,7 @@ footer {
   line-height: var(--line-height-base);
 }
 
-/* Responsive design for smaller screens */
-@media (max-width: 768px) {
-  .experience-item {
-    grid-template-columns: 1fr;
-    gap: var(--spacing-sm);
-  }
-
-  .experience-left, .experience-middle, .experience-right {
-    margin-bottom: var(--spacing-md);
-  }
-}
-
-/* Research Page Styling */
+/* ===== RESEARCH PAGE STYLES ===== */
 .research-header {
   text-align: center;
   margin-bottom: var(--spacing-xxxl);
@@ -371,23 +280,7 @@ footer {
   line-height: var(--line-height-base);
 }
 
-/* Responsive design for smaller screens */
-@media (max-width: 768px) {
-  .research-topic {
-    grid-template-columns: 1fr;
-    gap: var(--spacing-md);
-  }
-
-  .topic-title {
-    margin-bottom: var(--spacing-sm);
-  }
-
-  .research-header h2 {
-    font-size: var(--font-size-display);
-  }
-}
-
-/* Projects alignment styles */
+/* ===== PROJECT STYLES ===== */
 .project-block {
   margin: 3rem 0;
 }
@@ -440,19 +333,7 @@ footer {
   padding: var(--spacing-sm);
 }
 
-/* Responsive design */
-@media (max-width: 768px) {
-  .project-block .project-content {
-    flex-direction: column;
-    gap: 1.5rem;
-  }
-
-  .project-image {
-    max-width: 100%;
-  }
-}
-
-/* CV page styles */
+/* ===== CV PAGE STYLES ===== */
 .cv-container {
   max-width: 1000px;
   margin: 2rem auto;
@@ -470,12 +351,6 @@ footer {
 
 .pdf-viewer iframe {
   border: none;
-}
-
-@media (max-width: 768px) {
-  .pdf-viewer {
-    height: 600px;
-  }
 }
 
 .cv-actions {
@@ -496,6 +371,62 @@ footer {
 
 .download-button:hover {
   background-color: var(--color-success-dark);
+}
+
+/* ===== CONTACT FORM STYLES ===== */
+.form-group {
+  margin-bottom: var(--spacing-lg);
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: var(--spacing-xs);
+  font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: var(--spacing-sm);
+  border: 1px solid var(--color-border-light);
+  border-radius: var(--border-radius);
+}
+
+.form-group textarea {
+  resize: vertical;
+}
+
+.btn {
+  background-color: var(--color-primary);
+  color: white;
+  padding: var(--spacing-sm) var(--spacing-lg);
+  border: none;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  font-size: var(--font-size-base);
+}
+
+.btn:hover {
+  background-color: var(--color-secondary);
+}
+
+.invalid {
+  border-color: var(--color-error) !important;
+}
+
+.error-message {
+  color: var(--color-error);
+  font-size: var(--font-size-xs);
+  margin-top: var(--spacing-xs);
+}
+
+/* ===== FOOTER STYLES ===== */
+footer {
+  padding: var(--spacing-lg) 0;
+  text-align: center;
+  border-top: 1px solid var(--color-border);
+  margin-top: var(--spacing-xxxl);
+  color: var(--color-text-muted);
 }
 
 .social-icons {
@@ -526,4 +457,71 @@ footer {
 .copyright {
   font-size: var(--font-size-sm);
   color: var(--color-text-lighter);
+}
+
+/* ===== RESPONSIVE STYLES ===== */
+@media (max-width: 768px) {
+  /* Header responsive */
+  .site-title {
+    font-size: var(--font-size-display);
+    display: block;
+    text-align: center;
+  }
+
+  .search-container {
+    float: none;
+    text-align: center;
+    margin-top: var(--spacing-lg);
+  }
+
+  /* Navigation responsive */
+  .nav-menu {
+    flex-direction: column;
+    gap: var(--spacing-md);
+  }
+
+  /* Hero responsive */
+  .profile-image {
+    width: 180px;
+    height: 180px;
+  }
+
+  /* Experience responsive */
+  .experience-item {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-sm);
+  }
+
+  .experience-left, .experience-middle, .experience-right {
+    margin-bottom: var(--spacing-md);
+  }
+
+  /* Research responsive */
+  .research-topic {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-md);
+  }
+
+  .topic-title {
+    margin-bottom: var(--spacing-sm);
+  }
+
+  .research-header h2 {
+    font-size: var(--font-size-display);
+  }
+
+  /* Projects responsive */
+  .project-block .project-content {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .project-image {
+    max-width: 100%;
+  }
+
+  /* CV page responsive */
+  .pdf-viewer {
+    height: 600px;
+  }
 }
