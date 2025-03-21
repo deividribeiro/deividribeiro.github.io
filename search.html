@@ -1,32 +1,10 @@
 ---
 layout: default
 title: Search
+permalink: /search/
 ---
 <section class="page-content">
   <h3>Search Results</h3>
-  <div id="search-results"></div>
+  <div id="page-search-results" style="border: 1px dashed #ccc; min-height: 100px; padding: 10px;">
+  </div>
 </section>
-
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
-    var searchInput = document.getElementById('search-input');
-    var resultsContainer = document.getElementById('search-results');
-    var urlParams = new URLSearchParams(window.location.search);
-    var query = urlParams.get('query');
-
-    var sjs = SimpleJekyllSearch({
-      searchInput: searchInput,
-      resultsContainer: resultsContainer,
-      json: '{{ site.baseurl }}/search.json',
-      searchResultTemplate: '<div><a href="{url}"><h3>{title}</h3></a><p>{content}</p></div>',
-      noResultsText: 'No results found',
-      limit: 10,
-      fuzzy: false
-    });
-
-    if (query) {
-      searchInput.value = query;
-      sjs.search(query);
-    }
-  });
-</script>
