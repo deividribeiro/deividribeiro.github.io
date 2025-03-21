@@ -41,8 +41,7 @@ function performSearch() {
     if (query) {
         // Get the baseurl
         const searchButton = document.querySelector('button[onclick="performSearch()"]');
-        const baseurl = searchButton ? searchButton.getAttribute('data-baseurl') : null ||
-            document.body.getAttribute('data-baseurl') || '';
+        const baseurl = searchButton ? searchButton.getAttribute('data-baseurl') : document.body.getAttribute('data-baseurl') || '';
 
         // Redirect to the search page with the query parameter
         window.location.href = `${window.location.origin}${baseurl}/search/?query=${encodeURIComponent(query)}`;
