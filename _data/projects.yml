@@ -17,8 +17,17 @@
    image: "/assets/images/daily_articles_map_full.png"
    githubLink: "https://github.com/deividribeiro/reading_with_pocket/blob/main/Pocket.ipynb"
 
-// - title: "VTS Scheduler"
-//   description: "I worked on a project aimed at developing an observation scheduler for VERITAS. This initiative addresses the intricacies of managing 30-minute observation runs, during which significant changes in the night sky can occur, while also balancing multiple competing science priorities. The scheduling challenge is intensified by the presence of pre-scheduled runs and the need to accommodate unforeseen astronomical events, such as supernovae. Our goal is to create a reliable scheduling framework that facilitates efficient parsing, editing, and recomputation, ultimately optimizing the utilization of observational time and resources."
-//   image: "/assets/images/search-icon.svg"
-//   githubLink: "https://github.com/VERITAS-Observatory/VTSScheduler.git"
+# - title: "VTS Scheduler"
+#   description: "I worked on a project aimed at developing an observation scheduler for VERITAS. This initiative addresses the intricacies of managing 30-minute observation runs, during which significant changes in the night sky can occur, while also balancing multiple competing science priorities. The scheduling challenge is intensified by the presence of pre-scheduled runs and the need to accommodate unforeseen astronomical events, such as supernovae. Our goal is to create a reliable scheduling framework that facilitates efficient parsing, editing, and recomputation, ultimately optimizing the utilization of observational time and resources."
+#   image: "/assets/images/search-icon.svg"
+#   githubLink: "https://github.com/VERITAS-Observatory/VTSScheduler.git"
 
+# - title: "VERITAS Analysis Pipeline"
+#   description: "I developed vegas_scripts, an automated data processing pipeline for the VERITAS gamma-ray observatory. This tool streamlines the complex multi-stage analysis workflow by automatically retrieving data from the VERITAS database, configuring the appropriate analysis parameters for each of the six processing stages, and submitting computation jobs to distributed computing clusters using Condor or Slurm. The system significantly improves efficiency by eliminating manual intervention in the data processing chain while ensuring consistent analysis parameters across large datasets."
+#   image: "/assets/images/your_image_path.png"
+#   githubLink: "https://github.com/your_username/vegas_scripts"
+
+# - title: "SCT Mirror Alignment Visualizer"
+#   description: "I developed a specialized visualization tool for tracking the alignment process of the Schwarzschild-Couder Telescope mirror panels. By parsing position, coordinate, and orientation data from actual panel measurements and edge sensors, the system translates complex alignment information into an intuitive 2D visualization. The color-coded representation reveals how individual mirror panels change position and orientation over time, providing invaluable insights for the telescope alignment team. This visual approach simplified the interpretation of technical alignment data and helped identify patterns that might otherwise remain hidden in numerical datasets."
+#   image: "/assets/images/sct_mirror_visualization.png"
+#   githubLink: "https://github.com/your_username/sct_mirror_visualizer"
