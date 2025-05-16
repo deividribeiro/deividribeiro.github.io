@@ -503,8 +503,8 @@ nav {
   margin-bottom: 0;
 }
 
-/* ===== CV PAGE STYLES ===== */
-.cv-container {
+/* ===== Resume PAGE STYLES ===== */
+.resume-container {
   max-width: 1000px;
   margin: 2rem auto;
   padding: 0 var(--spacing-sm);
@@ -523,7 +523,7 @@ nav {
   border: none;
 }
 
-.cv-actions {
+.resume-actions {
   margin-bottom: var(--spacing-sm);
   text-align: center;
 }
@@ -731,7 +731,7 @@ footer {
     width: 100%; /* Make text take full width */
   }
 
-  /* CV page responsive */
+  /* resume page responsive */
   .pdf-viewer {
     height: 600px;
   }
