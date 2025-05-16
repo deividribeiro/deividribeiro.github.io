@@ -1,22 +1,29 @@
 topics:
-  - title: Machine Learning for VERITAS Data Analysis
+  - title: Machine Learning
     details:
-      - Developed machine learning algorithms to analyze gamma-ray data collected by the VERITAS observatory.
-      - Improved classification accuracy for astrophysical sources by implementing advanced feature extraction techniques.
-      - Conducted statistical analysis to validate the performance of the models, ensuring robustness and reproducibility.
-      - Delivered key insights into the behavior of gamma-ray sources, contributing to collaboration publications.
-  
-  - title: Development and Commissioning of Advanced Gamma-Ray Telescope Systems
-    details:
-      - Led the design, development, and commissioning of the prototype Schwarzschild-Couder Telescope (pSCT) for the Cherenkov Telescope Array.
-      - Aligned and validated the optical system, achieving on-axis optical design goals.
-      - Managed hardware and software integration, including mirror calibration and alignment tools.
-      - Published and presented extensively on the technical and scientific performance of the pSCT, including the detection of the Crab Nebula.
-      - Earned the Simon Swordy Outstanding VERITAS Contribution Award in recognition of exceptional contributions.
+      - Lead ML integration by training and deploying multiple ML models to improve data classification. Enhanced classification accuracy by implementing advanced feature extraction techniques.
+      - Conduct statistical analysis to validate model performance, including causal modeling and mediation analysis to inform model modification. Authored key code modifications that improved analysis sensitivity by 30% in a boosted decision-tree (BDT) model.
+      - Built and improved ML data pipelines and tools to automate processing and manage training and production layers.
+      - Developed algorithms and statistical models that use large-scale datasets to provide insights into physical systems.
+      - Created and applied analytical models using likelihood estimation and probabilistic reasoning to evaluate scenarios, predict outcomes, and identify potential roadblocks.
 
-  - title: Time Domain Program at VERITAS
+  - title: Software Engineering
     details:
-      - Analyzed transient astrophysical events, including gamma-ray bursts (GRBs), superluminous supernovae, and gravitational wave counterparts.
-      - Played a leading role in the analysis of supernovae SN2015bn and SN2017egm, culminating in high-impact publications.
-      - Coordinated multi-wavelength observations to provide comprehensive insights into transient events.
-      - Enhanced real-time data processing pipelines to support rapid follow-up of transient alerts.
+      - Modernized analysis stack by bridging legacy C++ systems with open-source python frameworks, enabling ML-driven workflows and full data model compatibility.
+      - Directed FAIR (findability, accessibility, interoperability, and reusability)-compliant modernization of 20-year raw data archive (>800 Tb) for systematic examination and data extraction.
+      - Led HPC infrastructure development for 1000+ concurrent projects across multiple institutions by creating a unified job submission framework with automated scheduling and error recovery.
+
+  - title: Project Management & Leadership
+    details:
+      - Chair analysis governance boards to assess statistical rigor and uncertainty in high-impact studies involving marginalized datasets. Lead expert review panels, clarify evaluation standards, and accelerate approval of non-standard techniques.
+      - Collaborate with colleagues on data modeling and reporting of performance metrics via presentations and publications.
+      - Revamped collaborative analysis and software development by engaging researchers, engineers, and stakeholders in planning and mentoring colleagues. Efforts also focused on integrating stalled features, attracting new contributors, establishing reproducible, modular pipelines, and streamlining code review processes.
+      - Mentored 5+ junior scientists in pipeline development and ML techniques, growing their expertise in Docker, Git, and high-performance computing workflows.
+      - Mentored grad students through validation testing, pipeline development, and codebase integration, culminating in successful PhD defenses.
+
+  - title: PhD Work
+    details:
+      - Built and installed telescope's data-collection hardware. Oversaw hardware and software integration, including calibration and alignment tools.
+      - Enhanced real-time data processing pipelines to support rapid follow-up on alerts. Authored detailed usage guides for data analysis workflows.
+      - Enabled virtual observation during COVID by creating a VNC-based remote access framework, integrating secure connections across control systems, data acquisition nodes, and monitoring interfaces. Standardized VPN/VNC workflows to reduce onboarding time for internal users.
+      - Provided presentations and consultations to stakeholders on analytics results and solutions.
