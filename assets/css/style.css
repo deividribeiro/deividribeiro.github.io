@@ -582,6 +582,69 @@ footer {
   color: var(--color-text-lighter);
 }
 
+/* Post layout with sidebar */
+.post-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+}
+
+.post-main {
+    flex: 0 0 80%;
+    max-width: 80%;
+    padding: 0 15px;
+}
+
+.previous-posts {
+    flex: 0 0 20%;
+    max-width: 20%;
+    padding: 0 15px;
+    margin-top: 50px;
+}
+
+.previous-post-item {
+    margin-bottom: 15px;
+}
+
+.previous-post-item a {
+    display: block;
+    font-weight: 500;
+}
+
+.previous-post-item .post-date {
+    font-size: 0.8em;
+    color: #777;
+}
+
+/* Fix code block overflow */
+pre, code {
+    overflow-x: auto;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    max-width: 100%;
+}
+
+/* Fix headers overflow */
+h1, h2, h3, h4, h5, h6 {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+/* Responsive adjustments */
+@media (max-width: 767px) {
+    .post-main, .previous-posts {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .previous-posts {
+        margin-top: 30px;
+        border-top: 1px solid #eee;
+        padding-top: 20px;
+    }
+}
+
+
 /* ===== RESPONSIVE STYLES ===== */
 @media (max-width: 768px) {
   /* Header responsive */

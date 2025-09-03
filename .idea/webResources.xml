@@ -11,6 +11,7 @@
             <path value="file://$PROJECT_DIR$/_includes/css" />
             <path value="file://$PROJECT_DIR$/img" />
             <path value="file://$PROJECT_DIR$/js" />
+            <path value="file://$PROJECT_DIR$/_data" />
           </resourceRoots>
         </entryData>
       </entry>

@@ -1,0 +1,27 @@
+---
+layout: default
+title: Posts
+---
+<div class="container">
+    <h1>Posts</h1>
+
+    {% if site.posts.size > 0 %}
+    <ul class="post-list">
+        {% for post in site.posts %}
+        <li>
+            <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+            <h5>
+                <a class="post-link" href="{{ post.url | relative_url }}">
+                    {{ post.title | escape }}
+                </a>
+            </h5>
+            {% if post.excerpt %}
+            <p>{{ post.excerpt }}</p>
+            {% endif %}
+        </li>
+        {% endfor %}
+    </ul>
+    {% else %}
+    <p>No posts available yet.</p>
+    {% endif %}
+</div>
