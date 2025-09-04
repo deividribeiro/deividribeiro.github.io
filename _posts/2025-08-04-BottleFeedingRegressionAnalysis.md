@@ -53,7 +53,7 @@ The main challenge is that the two variables—amount and timing—are not indep
 
 Ultimately, I hit a fundamental limitation: the dataset is too small. A few hundred points is rarely enough to train robust regression models, especially when the underlying process is complex and coupled.
 
-The lesson here is that this problem is really a time series challenge. Bottles follow daily rhythms, short-term fluctuations, and long-term trends. Treating them as independent regression tasks misses that structure. Next time, I’ll skip the regression models entirely and try vanilla time series methods.
+The lesson here is that this problem is really a time series challenge. Bottles follow daily rhythms, short-term fluctuations, and long-term trends. Treating them as independent regression tasks misses that structure. Next, I’ll try vanilla time series methods.
 
 <figure style="text-align: center;">
     <img src="/assets/images/total_daily_feeding.png"
@@ -62,4 +62,4 @@ The lesson here is that this problem is really a time series challenge. Bottles 
 </figure>
 <br>  
 
-Even though the first attempt wasn’t perfect, it was a valuable experiment. It clarified what makes feeding data hard to model and highlighted the importance of choosing the right tool for the problem. Next time, I’ll let the time series methods take the lead.
+Even though the first attempt wasn’t perfect, it was a valuable experiment. It clarified what makes feeding data hard to model and highlighted the importance of choosing the right tool for the problem. 

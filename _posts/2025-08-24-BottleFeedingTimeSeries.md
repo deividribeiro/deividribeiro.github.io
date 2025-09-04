@@ -57,16 +57,16 @@ Next, I extended the analysis with **SARIMA (Seasonal ARIMA)**. I tested seasona
 </figure>
 <br>  
 
-I could keep trying several version of the model orders. To automate the search, I tried **autoARIMA**, which scans through parameter combinations and returns the best model by information criteria. The results often converged on odd specifications like ARIMA(1,1,1)(1,1,1) or ARIMA(1,1,1)(1,1,0), which hinted that the data didn’t match clean seasonal cycles.
+I could keep trying several version of the model orders. To automate the search, I tried **autoARIMA**, which scans through parameter combinations and returns the best model by information criteria. The results often converged on odd specifications like ARIMA(1,1,1)(1,1,1) or ARIMA(1,1,1)(1,1,0) (where are the second order parameters I expected?), which hinted that the data didn’t match clean seasonal cycles.
 
-In the end, I stuck with the most stable model and generated 14-day forecasts. The predictions worked well for the earlier parts of the dataset but deteriorated in recent periods. This may be due to small sample sizes or noisy data—occasional logging mistakes or “weird days” where the baby deviated from routine.
+In the end, I stuck with the most stable model and generated 14-day forecasts. The predictions worked well for the earlier parts of the dataset but deteriorated in recent periods. This may be due to small sample sizes or noisy data, or from occasional logging mistakes or “weird days” where the baby deviated from routine.
 
 <figure style="text-align: center;">
     <img src="/assets/images/simple_arima_forecast.png"
         alt="ARIMA 14-Day Forecast" width="100%">
     <img src="/assets/images/sarima_forecast.png"
         alt="SARIMA 14-Day Forecast" width="100%">
-    <figcaption style="text-align: center;"><i> Forecast of bottle amounts over the next 14 days. Early predictions fit well, while later points diverge. </i></figcaption>
+    <figcaption style="text-align: center;"><i> Forecast of bottle amounts over the next 14 days. Early predictions fit well, while later points diverge. This forecast grows, while in the previous regression model it decreased. </i></figcaption>
 </figure>
 <br>  
 

@@ -28,7 +28,7 @@ From there, things escalated into a full data science project. I built a Jupyter
 <figure style="text-align: center;">
     <img src="/assets/images/total_daily_feeding.png"
         alt="Bottle Trends" width="100%">
-    <figcaption style="text-align: center;"><i> Bottle feeding amounts over time, showing steady growth. </i></figcaption>
+    <figcaption style="text-align: center;"><i> Bottle feeding amounts over time, showing steady growth and decline (self weaning). </i></figcaption>
 </figure>
 <br>  
 
@@ -41,7 +41,7 @@ From there, things escalated into a full data science project. I built a Jupyter
 
 <figure style="text-align: center;">
     <img src="/assets/images/growth.png"
-        alt="Growth Curves" width="40%">
+        alt="Growth Curves" width="50%">
     <figcaption style="text-align: center;"><i> Growth curves. </i></figcaption>
 </figure>
 <br>  
